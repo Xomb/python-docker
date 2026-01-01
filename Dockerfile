@@ -4,5 +4,7 @@ FROM python:3.9-slim
 WORKDIR /app
 # Copy the current directory contents into the container at /app
 COPY . /app
+# Install Python dependencies
+RUN pip install -r requirements.txt
 # Run app.py when the container launches
 CMD ["python", "app.py"]
